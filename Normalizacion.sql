@@ -206,6 +206,33 @@ order by 1 desc
 delete from accesos_tecnologia_localidad where accesos <= 0;
 
 select * from accesos_tecnologia_localidad;
+create table accessos_tec_mapa  (
+select accesos.provincia, accesos.partido, accesos.localidad, accesos.tecnologia, accesos.link_indec, accesos.accesos, latitud, longitud from accesos_tecnologia_localidad accesos, Mapa_Conectividad mapa
+where accesos.provincia = mapa.provincia 
+and accesos.partido = mapa.partido 
+and accesos.localidad = mapa.localidad 
+and accesos.link_indec = mapa.link)
+;
+
+select * from accessos_tec_mapa;
+select * from accesos_tecnologia_localidad accesos
+where accesos.partido not in( select partido from Mapa_Conectividad )
+#or accesos.partido != mapa.partido 
+#or  accesos.localidad != mapa.localidad 
+#or accesos.link_indec != mapa.link
+;
+
+select * from accesos_tecnologia_localidad; #7712
+select distinct localidad from accesos_tecnologia_localidad;
+select distinct partido from Mapa_Conectividad;
+
+/*AMBA
+OTROS
+Ciudad Autónoma de Buenos Aires
+*/
+
+select * from Mapa_Conectividad
+where upper(partido) like '%CAP%';
 
 select * from velocidad_provincia
 order by 1 desc;
@@ -485,3 +512,54 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 select * from  movil_accesos;
+
+select * from trimestre;
+
+ALTER TABLE ingresos DROP COLUMN periodo;
+ALTER TABLE totales_vmd DROP COLUMN trimestre_str;
+		 
+			  
+					  
+				   
+  
+
+ALTER TABLE ingresos ADD CONSTRAINT FK_trimestre FOREIGN KEY (trimestre) REFERENCES trimestre(id);
+						  
+						 
+			   
+						
+			  
+select * from ingresos;
+
+ALTER TABLE totales_vmd ADD CONSTRAINT FK_tot_trimestre FOREIGN KEY (trimestre) REFERENCES trimestre(id);
+								 
+		 
+			  
+					  
+				   
+  
+																								 
+							 
+						 
+			   
+						
+			  
+								 
+
+ALTER TABLE totales_acceso_tecnologia DROP COLUMN periodo;
+ALTER TABLE totales_acceso_tecnologia ADD CONSTRAINT FK_tot_tec_trimestre FOREIGN KEY (trimestre) REFERENCES trimestre(id);
+		 
+			  
+							
+							
+							  
+				   
+  
+
+																							 
+						 
+						 
+			   
+						
+			  
+select * from totales_acceso_tecnologia;
