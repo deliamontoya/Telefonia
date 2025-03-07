@@ -1,6 +1,6 @@
 
 # Analisis de las Telecomunicaciones en el internet
-![alt text](image-8.png){ height="300px" width="1300px"}
+![alt text](images/image-8.png){ height="300px" width="1300px"}
 
 
 
@@ -30,10 +30,10 @@ Se analizaron los ingresos, velocidades, penetracion, técnologia a lo largo de 
 
 
 - Tanto los ingresos como la velocidad van aumentando conforme van aumentando los años
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 - ADSL va disminuyendo en la actualidad, cable modem esta muy bien posicionado y fibra optica esta siendo muy fuerte
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 - Aún hay hogares con dial up, pero esto ya es muy minimo. Que tan costoso es seguir manteniendo esta técnologia.
 - Van subiendo los accesos a como va avanzando el año, asi que es importante siempre contar con lo requerido
@@ -41,17 +41,17 @@ Se analizaron los ingresos, velocidades, penetracion, técnologia a lo largo de 
 
 - Disminuyo los accesos de rango a partir del 2023
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 
 ### KPIs
 
 #### Aumentar en un 2% 
 Para obtener el KPI del acceso al servicio de internet para el próximo trimestre, cada 100 hogares, por provincia. La fórmula es la siguiente:
-        ![alt text](image-2.png)
+        ![alt text](images/image-2.png)
 
 A continuación el KPI por provincia con un incremento de 2% al próximo bimestre
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 
 #### Tasa de rotación
@@ -62,11 +62,11 @@ Tasa de rotación (%) = (número de clientes perdidos durante el período / núm
 
 El seguimiento de este KPI es vital porque afecta directamente los ingresos y el valor de por vida del cliente. Por ejemplo, si la tasa de rotación aumenta solo 1%, puede reducir drásticamente el pronóstico de ingresos, afectando la eficiencia operativa y los KPI financieros para las telecomunicaciones.
 
- ![alt text](image-3.png)
+ ![alt text](images/image-3.png)
 
 Para nuestra telefonia el KPI es de:
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 Reducir la tasa de rotación no solo mejora la retenión de los clientes, sino que también mejora la general Satisfacción del cliente en Telecom. Esto se puede lograr a través de generar nuevas estrategias
 
@@ -95,13 +95,20 @@ Reducir la tasa de rotación no solo mejora la retenión de los clientes, sino q
 
 ### Estructura de Archivos:
     resources: 
-        Contiene los archivos de recursos en formato csv
+        Folder que contiene los archivos de recursos en formato csv
+
+    images:
+        Folder contiene las imagenes utilizadas
+
     scripts.sql 
         Contiene la inserción en base de datos de cada uno de los recursos
+
     EDA (Exploratory Data Analysis) EDA.ipynb 
         Contiene el analisis de los datos
+
     Normalizacion.sql 
         Se aplicaron criterios que se encontraron en informe.ipynb
+        
     Informe.ipynb  
         Contiene la presentación y KPIs 
             
