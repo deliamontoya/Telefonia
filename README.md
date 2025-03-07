@@ -1,6 +1,6 @@
 
 # Analisis de las Telecomunicaciones en el internet
-![alt text](images/image-8.png){ height="300px" width="1300px"}
+![alt text](images/image-8.png){height="300px" width="1300px"}
 
 
 
@@ -108,7 +108,7 @@ Reducir la tasa de rotación no solo mejora la retenión de los clientes, sino q
 
     Normalizacion.sql 
         Se aplicaron criterios que se encontraron en informe.ipynb
-        
+
     Informe.ipynb  
         Contiene la presentación y KPIs 
             
