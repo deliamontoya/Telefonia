@@ -40,6 +40,7 @@ Se analizaron los ingresos, velocidades, penetracion, técnologia a lo largo de 
 
 
 - Disminuyo los accesos de rango a partir del 2023
+
 ![alt text](image-7.png)
 
 
